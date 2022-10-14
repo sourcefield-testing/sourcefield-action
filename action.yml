@@ -1,0 +1,20 @@
+name: "SourceField"
+description: "Analyze code changes and run custom rules."
+inputs:
+  who-to-greet:
+    description: "Who to greet"
+    required: true
+    default: "World"
+outputs:
+  time:
+    description: "The time we greeted you"
+runs:
+  using: "docker"
+  image: "us-docker.pkg.dev/plumbr/sourcefield-public/sourcefield-lsif-typescript:421ea40"
+  args:
+    - lsif-typescript
+    - index
+    - --output
+    - lsif.json
+  env:
+    SOURCEFIELD_LICENSE_KEY: "13106a49882140a1af44597461a499f3"

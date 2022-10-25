@@ -14,7 +14,7 @@ jobs:
           curl -s -X POST \
           -H "Content-Type: application/json" \
           -d '{ "query": "mutation { prCommentRiskScorePending(pr: {repoOwner: \"${{ github.event.repository.owner.login }}\", repoName: \"${{ github.event.repository.name }}\", prNumber: ${{ github.event.pull_request.number }} }) }" }' \
-          %%GRAPHQL_ENDPOINT%%
+          https://cartographr-api.sourcefield.io/dev-hwkns-plumbr/graphql
 
   fetchLanguages:
     name: Fetch Languages in Repo

@@ -9,6 +9,7 @@ jobs:
     name: Parse and Map repo
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Do it all
         uses: ./action.yml
         with:

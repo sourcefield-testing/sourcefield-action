@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Do it all
-        uses: ./action.yml
+        uses: .
         with:
           who-to-greet: "You"
